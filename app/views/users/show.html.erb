@@ -1,1 +1,6 @@
+<h1><%= @user.username %></h1>
 
+<h3>Commented Posts</h3>
+<% @user.unique_posts.each do |post| %>
+    <%= link_to post.title, post %><br>
+<% end %>

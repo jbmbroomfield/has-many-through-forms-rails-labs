@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
 
   def create
+    puts "params: #{params}"
+    puts "comment_params #{comment_params}"
     comment = Comment.create(comment_params)
     redirect_to comment.post
   end
